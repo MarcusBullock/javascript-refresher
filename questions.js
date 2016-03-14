@@ -27,7 +27,7 @@ function removeNullElements(array) {
 };
 
 function isNotNull(element) {
-  return element != null;
+  return element !== null;
 };
 
 function removeNullAndFalseElements(array) {
@@ -53,11 +53,10 @@ var everyPossiblePair = function(array) {
     for (var j = i+1; j < array.length; j++) {
       if(array[i] < array [j]) {
         answer.push(new Array(array[i], array[j]));
-        answer.sort()
       } else {
         answer.push(new Array(array[j], array[i]));
-        answer.sort()
       }
+    answer.sort()
     }
   }
   return answer
@@ -84,7 +83,9 @@ var sortByLastLetter = function(array) {
 
 
 var getFirstHalf = function(string) {
-  return 'Write your method here';
+  middle = Math.round(string.length / 2)
+  bob = string.substr(0, middle)
+  return bob
 }
 
 var makeNegative = function(number) {
