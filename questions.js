@@ -159,8 +159,22 @@ var convertArrayToObject = function(array) {
 }
 
 var getAllLetters = function(array) {
-  return 'Write your method here';
-}
+  //grab letters
+  var newArray = [];
+  var result = [];
+  for(i= 0; i < array.length; i++) {
+    newArray.push(array[i].split(''));
+  };
+  x = result.concat.apply(result, newArray).sort();
+  // delete duplicates
+  var newArr2 = [];
+    for(var j = 0; j < x.length; j++){
+        if(newArr2.indexOf(x[j]) == -1){
+        newArr2.push(x[j]);
+        }
+    }
+    return newArr2;
+};
 
 var swapKeysAndValues = function(object) {
   return 'Write your method here';
