@@ -1,7 +1,7 @@
 
 
 var selectElementsStartingWithA = function(array) {
-  answer = []
+  var answer = []
   for(var i = 0; i < array.length; i++) {
         if(array[i].charAt(0) === 'a')
             answer.push(array[i]);
@@ -10,7 +10,7 @@ var selectElementsStartingWithA = function(array) {
 }
 
 var selectElementsStartingWithVowel = function(array) {
-  answer = []
+  var answer = []
   var vowels = ["a", "e", "i", "o", "u"];
   for(var i = 0; i < array.length; i++) {
     for(var j = 0; j < vowels.length; j++) {
@@ -83,8 +83,8 @@ var sortByLastLetter = function(array) {
 
 
 var getFirstHalf = function(string) {
-  middle = Math.round(string.length / 2)
-  bob = string.substr(0, middle)
+  var middle = Math.round(string.length / 2)
+  var bob = string.substr(0, middle)
   return bob
 }
 
@@ -121,7 +121,7 @@ var longestWord = function(array) {
 }
 
 var sumNumbers = function(array) {
-  x = array.reduce(add,0);
+  var x = array.reduce(add,0);
   return x;
   function add(a, b) {
     return a + b;
@@ -129,17 +129,17 @@ var sumNumbers = function(array) {
 }
 
 var repeatElements = function(array) {
-  array = array.concat(array);
+  var array = array.concat(array);
   return array;
 };
 
 var stringToNumber = function(string) {
-  x = parseInt(string);
+  var x = parseInt(string);
   return x;
 }
 
 var calculateAverage = function(array) {
-  x = array.reduce(add,0);
+  var x = array.reduce(add,0);
   return x / array.length
   function add(a, b) {
     return a + b;
@@ -151,7 +151,7 @@ var getElementsUntilGreaterThanFive = function(array) {
 };
 
 var convertArrayToObject = function(array) {
-  object = {};
+  var object = {};
   for(var i = 0; i < array.length; i += 2) {
     object[array[i]] = array[i+1];
   }
@@ -173,11 +173,15 @@ var getAllLetters = function(array) {
         newArr2.push(x[j]);
         }
     }
-    return newArr2;
+  return newArr2;
 };
 
 var swapKeysAndValues = function(object) {
-  return 'Write your method here';
+  var result = {}
+  for(var key in object) {
+    result[object[key]] = key;
+  }
+  return result;
 }
 
 var sumKeysAndValues = function(object) {
