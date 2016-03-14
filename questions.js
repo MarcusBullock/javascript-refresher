@@ -151,7 +151,11 @@ var getElementsUntilGreaterThanFive = function(array) {
 };
 
 var convertArrayToObject = function(array) {
-  return 'Write your method here';
+  object = {};
+  for(var i = 0; i < array.length; i += 2) {
+    object[array[i]] = array[i+1];
+  }
+  return object;
 }
 
 var getAllLetters = function(array) {
