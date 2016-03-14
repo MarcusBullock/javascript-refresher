@@ -134,7 +134,8 @@ var repeatElements = function(array) {
 };
 
 var stringToNumber = function(string) {
-  return 'Write your method here';
+  x = parseInt(string);
+  return x;
 }
 
 var calculateAverage = function(array) {
