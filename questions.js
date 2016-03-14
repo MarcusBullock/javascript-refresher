@@ -106,14 +106,18 @@ var numberOfPalindromes = function(array) {
   };
 };
 
-
-
 var shortestWord = function(array) {
-  return 'Write your method here';
-}
+  array.sort(function(a, b) {
+    return a.length - b.length;
+    });
+  return array[0];
+};
 
 var longestWord = function(array) {
-  return 'Write your method here';
+  array.sort(function(a, b) {
+    return a.length - b.length;
+    });
+  return array.slice(-1)[0]
 }
 
 var sumNumbers = function(array) {
