@@ -1,3 +1,5 @@
+
+
 var selectElementsStartingWithA = function(array) {
   answer = []
   for(var i = 0; i < array.length; i++) {
@@ -19,18 +21,32 @@ var selectElementsStartingWithVowel = function(array) {
   return answer;
 }
 
-var removeNullElements = function(array) {
-  array = array.filter(function(n){ return n != undefined });
-  return array
-}
+function removeNullElements(array) {
+  var result = array.filter(isNotNull);
+  return result
+};
 
-var removeNullAndFalseElements = function(array) {
-  return 'Write your method here';
-}
+function isNotNull(element) {
+  return element != null;
+};
+
+function removeNullAndFalseElements(array) {
+  var result = array.filter(isNotNull).filter(isNotFalse);
+  result.push(0)
+  return result
+};
+
+function isNotFalse(element) {
+  return element != false;
+};
 
 var reverseWordsInArray = function(array) {
-  return 'Write your method here';
-}
+  var result =[];
+  for(var i=0; i < array.length; i++) {
+    result.push(array[i].split('').reverse().join(''));
+  };
+  return result;
+};
 
 var everyPossiblePair = function(array) {
   return 'Write your method here';
