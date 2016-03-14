@@ -129,11 +129,9 @@ var sumNumbers = function(array) {
 }
 
 var repeatElements = function(array) {
-  for(var i=0; i < array.length; i++) {
-    array.push(i);
-  }
+  array = array.concat(array);
   return array;
-}
+};
 
 var stringToNumber = function(string) {
   return 'Write your method here';
