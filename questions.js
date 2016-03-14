@@ -63,18 +63,25 @@ var everyPossiblePair = function(array) {
   return answer
 };
 
-
 var allElementsExceptFirstThree = function(array) {
-  return 'Write your method here';
+  x = array.slice(3);
+  return x;
 }
 
 var addElementToBeginning = function(array, element) {
-  return 'Write your method here';
+  array.splice(0, 0, element)
+  return array;
 }
 
 var sortByLastLetter = function(array) {
-  return 'Write your method here';
-}
+  array.sort(function(a, b){
+    var aLastLetter = a.slice(-1);
+    var bLastLetter = b.slice(-1);
+    return aLastLetter < bLastLetter ? -1 : aLastLetter > bLastLetter ? 1 : 0
+  })
+  return array;
+};
+
 
 var getFirstHalf = function(string) {
   return 'Write your method here';
