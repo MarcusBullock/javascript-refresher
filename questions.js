@@ -31,14 +31,13 @@ function isNotNull(element) {
 };
 
 function removeNullAndFalseElements(array) {
-  var result = array.filter(isNotNull).filter(isNotFalse);
-  result.push(0)
-  return result
+  function isNotFalse(element) {
+    return element !== false;
+  };
+    var result = array.filter(isNotNull).filter(isNotFalse);
+    return result
 };
 
-function isNotFalse(element) {
-  return element != false;
-};
 
 var reverseWordsInArray = function(array) {
   var result =[];
