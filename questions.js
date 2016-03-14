@@ -95,11 +95,18 @@ var makeNegative = function(number) {
     number = number;
   };
   return number;
-}
+};
 
 var numberOfPalindromes = function(array) {
-  return 'Write your method here';
-}
+  var result = array.filter(isAPalindrome).length;
+  return result
+
+  function isAPalindrome(element) {
+    return element === element.split('').reverse().join('');
+  };
+};
+
+
 
 var shortestWord = function(array) {
   return 'Write your method here';
