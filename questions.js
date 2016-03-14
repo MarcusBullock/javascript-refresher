@@ -139,7 +139,11 @@ var stringToNumber = function(string) {
 }
 
 var calculateAverage = function(array) {
-  return 'Write your method here';
+  x = array.reduce(add,0);
+  return x / array.length
+  function add(a, b) {
+    return a + b;
+  }
 }
 
 var getElementsUntilGreaterThanFive = function(array) {
